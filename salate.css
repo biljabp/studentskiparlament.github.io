@@ -37,6 +37,10 @@ body {
     color: white;
 }
 
+.thumbnail-height{
+    height:420px;
+}
+
 .navbar-custom .navbar-toggle .icon-bar {
     background-color: #fffafd;
 }
