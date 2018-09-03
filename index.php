@@ -8,7 +8,7 @@
       integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 <!-- Latest compiled and minified JavaScript -->
-<link href="salate.css" rel="stylesheet">
+<link href="css/stylesheet.css" rel="stylesheet">
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -21,20 +21,17 @@
         gtag('config', 'UA-109808964-1');
     </script>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Dezert salate u tegli. Ukusne poslastice zdrave i hranljive.">
-    <meta name="keywords" content="Dezert salate, Slatke salate, Salate sa nutelom, salate sa eurokremom,
-                                    salata, eurokrem, dezert, slatko, cokolada, chokocake, honey cake, homeroche, monaliza, nugat,
-                                    jabuka cake"/>
+    <meta name="description" content="Salate u tegli! Nove atraktivne poslastice koje ce utoliti vasu glad i omoguciti vam da budete aktivni ceo dan!">
+    <meta name="keywords" content="salate u tegli, salate, tegla, teglas, energetske salate, dezert salate, posne salate"/>
     <meta name="author" content="BPP team">
     <title>Salad in a jar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 
     <!-- Facebook Pixel Code -->
     <script>
@@ -53,6 +50,7 @@
                    src="https://www.facebook.com/tr?id=536966099993520&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
+
 
 </head>
 <body>
@@ -103,7 +101,7 @@
     <div class="icons" align="right">
         <p>Pratite nas na:</p>
         <a href="https://www.facebook.com/yummysaladssu/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href="https://twitter.com/yummysaladssu"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/teglasns?lang=en"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
         <a href="https://www.instagram.com/teglans/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
     </div>
     <div id="header">
@@ -111,82 +109,82 @@
         <p>Samo u Yummy Salads objektima. Ako nam vratite 10 praznih teglica nazad, dobijate od nas dve PUNE po Vašem izboru za SAMO 1 RSD.</p>
     </div>
 </div>
+
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" align="center">
+    <!-- Indicators -->
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="images/saradnja.jpg" alt="picture">
+            <div class="carousel-caption">
+            </div>
+        </div>
+
+    </div>
+</div>
 <br/>
 
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
-<ul class="list-group">
-    <li class="list-group-item list-group-item-success">DESSERT SALATE</li>
-</ul>
-
-<div class="row">
-    <div class="col-sm-3 col-md-4 col-lg-3">
-        <div class="thumbnail thumbnail-height">
-            <img src="images/dezert/choco_cake.jpeg" alt="picture">
-            <div class="caption">
-                <h3>Choco Cake (180g)</h3>
-                <p>Čokoladna kora sa bademom, orahom i čokoladnim kremom, prekrivena filom od crne čokolade.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-3 col-md-4 col-lg-3">
-        <div class="thumbnail thumbnail-height">
-            <img src="images/dezert/home_made_cake.jpeg" alt="picture">
-            <div class="caption">
-                <h3>Home Made Cake (150g)</h3>
-                <p>Korice od belanaca, žuti fil sa ukusom keksa, sos sa korom narandže, komadićima čokoladnog keksa.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-3 col-md-4 col-lg-3">
-        <div class="thumbnail thumbnail-height">
-            <img src="images/dezert/homeroche.jpeg" alt="picture">
-            <div class="caption">
-                <h3>Homeroche (150g)</h3>
-                <p>Čokoladni biskvit, fil sa ukusom kafe i čokolade, sloj pečenih lešnika, preliv od mlečne čokolade.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-3 col-md-4 col-lg-3">
-        <div class="thumbnail thumbnail-height">
-            <img src="images/dezert/monaliza_posno.jpeg" alt="picture">
-            <div class="caption">
-                <h3>Monaliza - Posno (195g)</h3>
-                <p>Kakao biskvit sa orahom i marmeladom, čokoladni fil sa crnom čokoladom, malina sos od kuvanih malina, posuto crvenim ribizlama.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-3 col-md-4 col-lg-3">
-        <div class="thumbnail thumbnail-height">
-            <img src="images/dezert/nugat.jpeg" alt="picture">
-            <div class="caption">
-                <h3>Nugat (165g)</h3>
-                <p>Čokoladni biskvit, lešnik fil sa belom čokoladom, lešnik fil sa čokoladnim kremom, kakao preliv.       </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-3 col-md-4 col-lg-3">
-        <div class="thumbnail thumbnail-height">
-            <img src="images/dezert/teglas_cake_jabuka.jpeg" alt="picture">
-            <div class="caption">
-                <h3>Tegla's Cake - Jabuka (175g)</h3>
-                <p>Žuti biskvit, naizmenično prekriven slojevima žutog krema sa ukusom keksa i jabuka nadeva sa komadićima jabuke, posuto badem listićima.</p>
-            </div>
-        </div>
+<div class="background">
+    <br/>
+<div class="panel panel-success">
+    <div class="panel-heading"><h3>Sviđaju Vam se naši proizvodi i želite ih u svom objektu? </h3></div>
+    <div class="panel-body">
+        <p>Da li imate ugostiteljski objekat kojem je potreban neki inovitet? Potreban Vam je neki novi proizvod ili osveženje? Ako je jedan od odgovora "Da", onda ste na pravom mestu!
+            Mi smo kompanija koja uvek ima u planu i cilju da se proširi, pa s toga nudimo opcije saradnje sa svim ugostiteljskim objektima. Obogatite svoj jelovnik, učinite ga zanimljivim i ukusnijim sa našim originalnim i zdravim proizvodima.
+            <br/>U ponudi Vam nudimo tri proizvoda:</p>
+        <ul>
+        <li>Obrok salate u tegli</li>
+        <li>Energetske obroke u tegli</li>
+        <li>Kolače u tegli</li>
+        </ul>
     </div>
 </div>
 
+<div class="container form">
+    <div class="col-md-5">
+        <div class="form-area">
+            <form role="form">
+                <br style="clear:both">
+                <h3 style="margin-bottom: 25px; text-align: center;">Kontaktirajte nas pomoću:</h3>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Ime i prezime" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Broj mobilnog telefona" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Tekst poruke" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="5"></textarea>
+                    <span class="help-block"><p id="characterLeft" class="help-block ">Prešli ste limit</p></span>
+                </div>
 
+                <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Pošaljite</button>
+            </form>
+        </div>
+    </div>
+</div>
+    <br/>
+</div>
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<div class="picture" align="center">
+    <p>Članovi našeg tima:</p>
+    <a href="http://www.organska-ishrana.me"><img src="images/sponzori.png" alt="picture" class="banner img-responsive"/></a>
+    <a href="http://stanniel.github.io"><img src="images/sponzori2.png" alt="picture" class="banner img-responsive"/></a>
+
+</div>
 <footer>
     <div class="container">
         <div class="row">
-
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                 <ul class="adress">
                     <span>Adresa</span>
@@ -221,11 +219,12 @@
 
                 </ul>
             </div>
+
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                 <ul class="social">
                     <span>Pratite nas na:</span>
-                    <li><a href="https://www.facebook.com/yummysaladssu/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="https://twitter.com/teglasns?lang=en"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.facebook.com/teglasns/?ref=br_rs"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://twitter.com/yummysaladssu"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
                     <li><a href="https://www.instagram.com/teglans/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                 </ul>
             </div>

@@ -8,7 +8,7 @@
       integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 <!-- Latest compiled and minified JavaScript -->
-<link href="o_nama.css" rel="stylesheet">
+<link href="css/salate.css" rel="stylesheet">
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -21,9 +21,15 @@
         gtag('config', 'UA-109808964-1');
     </script>
 
-    <meta charset="UTF-8">
-    <title>Salad in a jar</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dezert salate u tegli. Ukusne poslastice zdrave i hranljive.">
+    <meta name="keywords" content="Dezert salate, Slatke salate, Salate sa nutelom, salate sa eurokremom,
+                                    salata, eurokrem, dezert, slatko, cokolada, chokocake, honey cake, homeroche, monaliza, nugat,
+                                    jabuka cake"/>
+    <meta name="author" content="BPP team">
+    <title>Salad in a jar</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -47,7 +53,6 @@
                    src="https://www.facebook.com/tr?id=536966099993520&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
-
 
 </head>
 <body>
@@ -106,79 +111,77 @@
         <p>Samo u Yummy Salads objektima. Ako nam vratite 10 praznih teglica nazad, dobijate od nas dve PUNE po Vašem izboru za SAMO 1 RSD.</p>
     </div>
 </div>
-
-
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" align="center">
-    <!-- Indicators -->
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="images/about.jpg" alt="picture">
-            <div class="carousel-caption">
-            </div>
-        </div>
-
-    </div>
-</div>
 <br/>
-
-<div class="o-nama">
-    <h3>Naša kompanija</h3><br/>
-    <p>Često se pitamo koju hranu da konzumiramo, šta jesti danas, da li otići kupiti brzu hranu ili
-        pojesti nešto kuvano? Nekad nas mrzi da budemo sam svoj majstor, da eksperimentišemo u kuhinji
-        ili jednostavno nemamo vremena za to. Naš tim je takođe bio pitan istim ovim pitanjima svakodnevno,
-        kako da jedemo a da to bude na zdrav način. Iz ovih pitanja je nastala ideja salate u teglama.
-        Neverovatnom brzinom, ova ideja se počela razvijati i pretvarati u stvarnost, počevši se širiti,
-        kako po većim tako i manjim gradovima.<br/>
-        Naš cilj je biti inovativan, pružiti našim klijentima nešto novo ali zdravo i sveže, u zanimljivom pakovanju.
-        Imamo još mnoštvo ideja, i sigurni smo da će Vam se i one takođe dopasti, kao i ova do sada.<br/>
-        A sada, skoknite do najbližeg restorana Yummy Salads-a, ili naručite na kućnu adresu! </p> <br/>
-</div>
-
-<div class="row">
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-            <img src="images/salad3.jpg" alt="picture">
-        </div>
-    </div>
-
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-            <img src="images/salad1.jpg" alt="picture">
-        </div>
-    </div>
-
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-            <img src="images/salad2.jpg" alt="picture">
-        </div>
-    </div>
-
-
-
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-            <img src="images/teglas10.jpg" alt="picture">
-        </div>
-    </div>
-
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-            <img src="images/teglas8.jpg" alt="picture">
-        </div>
-    </div>
-
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-            <img src="images/teglas2.jpg" alt="picture">
-        </div>
-    </div>
-
-</div>
 
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<ul class="list-group">
+    <li class="list-group-item list-group-item-success">DESSERT SALATE</li>
+</ul>
+
+<div class="row">
+    <div class="col-sm-3 col-md-4 col-lg-3">
+        <div class="thumbnail thumbnail-height">
+            <img src="images/dezert/choco_cake.jpeg" alt="picture">
+            <div class="caption">
+                <h3>Choco Cake (180g)</h3>
+                <p>Čokoladna kora sa bademom, orahom i čokoladnim kremom, prekrivena filom od crne čokolade.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3 col-md-4 col-lg-3">
+        <div class="thumbnail thumbnail-height">
+            <img src="images/dezert/home_made_cake.jpeg" alt="picture">
+            <div class="caption">
+                <h3>Home Made Cake (150g)</h3>
+                <p>Korice od belanaca, žuti fil sa ukusom keksa, sos sa korom narandže, komadićima čokoladnog keksa.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3 col-md-4 col-lg-3">
+        <div class="thumbnail thumbnail-height">
+            <img src="images/dezert/homeroche.jpeg" alt="picture">
+            <div class="caption">
+                <h3>Homeroche (150g)</h3>
+                <p>Čokoladni biskvit, fil sa ukusom kafe i čokolade, sloj pečenih lešnika, preliv od mlečne čokolade.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3 col-md-4 col-lg-3">
+        <div class="thumbnail thumbnail-height">
+            <img src="images/dezert/monaliza_posno.jpeg" alt="picture">
+            <div class="caption">
+                <h3>Monaliza - Posno (195g)</h3>
+                <p>Kakao biskvit sa orahom i marmeladom, čokoladni fil sa crnom čokoladom, malina sos od kuvanih malina, posuto crvenim ribizlama.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3 col-md-4 col-lg-3">
+        <div class="thumbnail thumbnail-height">
+            <img src="images/dezert/nugat.jpeg" alt="picture">
+            <div class="caption">
+                <h3>Nugat (165g)</h3>
+                <p>Čokoladni biskvit, lešnik fil sa belom čokoladom, lešnik fil sa čokoladnim kremom, kakao preliv.       </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3 col-md-4 col-lg-3">
+        <div class="thumbnail thumbnail-height">
+            <img src="images/dezert/teglas_cake_jabuka.jpeg" alt="picture">
+            <div class="caption">
+                <h3>Tegla's Cake - Jabuka (175g)</h3>
+                <p>Žuti biskvit, naizmenično prekriven slojevima žutog krema sa ukusom keksa i jabuka nadeva sa komadićima jabuke, posuto badem listićima.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <footer>
     <div class="container">
@@ -218,11 +221,10 @@
 
                 </ul>
             </div>
-
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                 <ul class="social">
                     <span>Pratite nas na:</span>
-                    <li><a href="https://www.facebook.com/teglasns/?ref=br_rs"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.facebook.com/yummysaladssu/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                     <li><a href="https://twitter.com/teglasns?lang=en"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
                     <li><a href="https://www.instagram.com/teglans/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                 </ul>
@@ -230,7 +232,7 @@
         </div>
     </div>
 </footer>
-<p align="center" style="color: white; background-color:#004020">Copyright © salate.me 2017<br/>Ovaj sajt je namenjen isljučivo u ŠKOLSKE svrhe</p>
+<p align="center" style="color: white; background-color:#004020">Copyright © salate.me 2017<br/>Ovaj sajt je namenjen isključivo u ŠKOLSKE svrhe</p>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

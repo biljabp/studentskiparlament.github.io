@@ -8,7 +8,7 @@
       integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 <!-- Latest compiled and minified JavaScript -->
-<link href="salate.css" rel="stylesheet">
+<link href="css/salate.css" rel="stylesheet">
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -22,12 +22,10 @@
     </script>
 
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Energetske salate, za ekergetski dan! Napravite pauzu, uzmite energetsku teglicu
-                                      i izdrzite na nogama ceo dan!">
-    <meta name="keywords" content="energetske salate, energy salad, guarana salad, untra energy salad, banana bomb,
-                                    blueberry bomb, carrot"/>
+    <meta name="description" content="Vegetarijanske salate kakve do sada niste probali! Najukusnije i najatraktivnije vegetarijanske salate na trzistu. Pogledajte nasu ponudu!">
+    <meta name="keywords" content="salate u tegli, vegetarijanske salate, cezar salata, zelena salata, kupus salata, brokoli salate"/>
     <meta name="author" content="BPP team">
     <title>Salad in a jar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -118,41 +116,94 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 <ul class="list-group">
-    <li class="list-group-item list-group-item-success">ENERGY SALATE</li>
+    <li class="list-group-item list-group-item-success">OBROK SALATE</li>
 </ul>
 
 <div class="row">
-    <div class="col-sm-3 col-md-4 col-lg-3">
+    <div class="col-sm-3 col-md-3 col-lg-4">
         <div class="thumbnail thumbnail-height">
-            <img src="images/energetske/banana_bomb.jpeg" alt="picture">
+            <img src="images/obrok/bacon_salad.jpeg" alt="picture">
             <div class="caption">
-                <h3>Banana Bomb (225g)</h3>
-                <p>kranči musli, orasi, banana, kikiriki puter, sojino mleko, med, grčki jogurt</p>
+                <h3>Bacon Salad (320g)</h3>
+                <p>penne, cherry, pančeta, trapist, kukuruz, zelene i crne masline, crveni luk, cream dressing</p>
             </div>
         </div>
     </div>
 
-    <div class="col-sm-3 col-md-4 col-lg-3">
+    <div class="col-sm-3 col-md-3 col-lg-4">
         <div class="thumbnail thumbnail-height">
-            <img src="images/energetske/blueberry_crisp.jpeg" alt="picture">
+            <img src="images/obrok/beetroot_salad.jpeg" alt="picture">
             <div class="caption">
-                <h3>Blueberry Crisp (225g)</h3>
-                <p>kranči musli, limunov sok, javorov sirup, borovnica, sojino mleko, vanila, grčki jogurt</p>
+                <h3>Beetroot Chicken (330g)</h3>
+                <p>piletina, cherry, brokoli, crne i zelene masline, bademi, cvekla, kornišoni, jabuke, cream dressing</p>
             </div>
         </div>
     </div>
 
-    <div class="col-sm-3 col-md-4 col-lg-3">
+    <div class="col-sm-3 col-md-3 col-lg-4">
         <div class="thumbnail thumbnail-height">
-            <img src="images/energetske/carrot_crunch.jpeg" alt="picture">
+            <img src="images/obrok/chicken_and_brokoli.jpeg" alt="picture">
             <div class="caption">
-                <h3>Carrot Crunch (230g)</h3>
-                <p>kranči musli, jabuka, javorov sirup, orasi, sojino mleko, cimet, grčki jogurt, šargarepa</p>
+                <h3>Chicken And Broccoli (300g)</h3>
+                <p>piletina, brokoli, feta, kukuruz, šargarepa, krutoni, hrastov list, cream dressing</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3 col-md-3 col-lg-4">
+        <div class="thumbnail thumbnail-height">
+            <img src="images/obrok/coolen_salad.jpeg" alt="picture">
+            <div class="caption">
+                <h3>Coolen Salad (310g)</h3>
+                <p>kulen, ajvar, spanać, dimljeni sir, jaja, kiseli krastavci, iceberg, grčki jogurt, krutoni</p>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="col-sm-3 col-md-3 col-lg-4">
+        <div class="thumbnail thumbnail-height">
+            <img src="images/obrok/cream_beam.jpeg" alt="picture">
+            <div class="caption">
+                <h3>Cream Beam (270g)</h3>
+                <p>cherry, suvo grožđe, kukuruz, krutoni, praziluk, hrastov list, cream dressing</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3 col-md-3 col-lg-4">
+        <div class="thumbnail thumbnail-height">
+            <img src="images/obrok/cream_bean_posni.jpeg" alt="picture">
+            <div class="caption">
+                <h3>Cream Beam - Posni (270g)</h3>
+                <p>cherry, suvo grožđe, kukuruz, krutoni, praziluk, hrastov list, clear dressing</p>
             </div>
         </div>
     </div>
 </div>
 
+<section class="our_client">
+    <h4 class="title"><span class="text">Baneri</span></h4>
+    <div class="row">
+        <div class="span2">
+            <a href="http://salate.me/"><img alt="salate" src="images/vector.jpg" ></a>
+        </div>
+        <div class="span2">
+            <a href="http://ipg.veselinromic.com/"><img alt="prodaja guma" src="images/vector.jpg" style="width: 100px;"></a>
+        </div>
+        <div class="span2">
+            <a href="http://organska-ishrana.me/"><img alt="organska ishrana" src="images/vector.jpg" style="width: 100px;"></a>
+        </div>
+        <div class="span2">
+            <a href="http://devlakoznejakne.byethost7.com/?i=1"><img alt="kozne jakne" src="images/vector.jpg" style="width: 100px;"></a>
+        </div>
+        <div class="span2">
+            <a href="http://cugni.me/"><img alt="cugni me" src="images/vector.jpg" style="width: 100px;"></a>
+        </div>
+        <div class="span2">
+            <a href="#"><img alt="placeholder, 50 eura" src="images/vector.jpg" style="width: 100px;"></a>
+        </div>
+    </div>
+</section>
 
 <footer>
     <div class="container">
@@ -175,7 +226,7 @@
                 </ul>
             </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-4">
+            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3">
                 <ul class="contact">
                     <span>Kontakt</span>
                     <li>
@@ -196,7 +247,7 @@
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                 <ul class="social">
                     <span>Pratite nas na:</span>
-                    <li><a href="https://www.facebook.com/teglasns/?ref=br_rs"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.facebook.com/yummysaladssu/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                     <li><a href="https://twitter.com/teglasns?lang=en"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
                     <li><a href="https://www.instagram.com/teglans/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                 </ul>

@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../salate_shop/.idea/salate_shop.iml" filepath="$PROJECT_DIR$/../salate_shop/.idea/salate_shop.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/studentskiparlament.github.io.iml" filepath="$PROJECT_DIR$/.idea/studentskiparlament.github.io.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../web_shop/.idea/web_shop.iml" filepath="$PROJECT_DIR$/../web_shop/.idea/web_shop.iml" />
     </modules>
   </component>
 </project>
