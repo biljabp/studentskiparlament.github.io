@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="22eaad3a-921e-436c-812b-02a0774c386e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/salate.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/salate.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dezert_salate.php" beforeDir="false" afterPath="$PROJECT_DIR$/dezert_salate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obrok_salate.php" beforeDir="false" afterPath="$PROJECT_DIR$/obrok_salate.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,11 +17,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dezert_salate.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dezert_salate.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dezert_salate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="115">
+              <caret line="5" column="25" selection-end-line="215" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="salate.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/salate.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -121,6 +131,7 @@
         <option value="$PROJECT_DIR$/css/salate.css" />
         <option value="$PROJECT_DIR$/obrok_salate.php" />
         <option value="$PROJECT_DIR$/dezert_salate.php" />
+        <option value="$PROJECT_DIR$/salate.php" />
       </list>
     </option>
   </component>
@@ -142,10 +153,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="40" />
-    <option name="y" value="-11" />
+    <option name="x" value="-139" />
+    <option name="y" value="118" />
     <option name="width" value="1327" />
-    <option name="height" value="780" />
+    <option name="height" value="738" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -217,15 +228,15 @@
       <workItem from="1527860417630" duration="4089000" />
       <workItem from="1529305821410" duration="4853000" />
       <workItem from="1531095386069" duration="48000" />
-      <workItem from="1535992136294" duration="7583000" />
+      <workItem from="1535992136294" duration="9975000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27897000" />
+    <option name="totallyTimeSpent" value="30289000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -235,7 +246,7 @@
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24281392" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24281392" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -279,13 +290,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/robots.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html" />
     <entry file="file://$PROJECT_DIR$/ketering.html" />
     <entry file="file://$PROJECT_DIR$/kontakt.html" />
@@ -459,8 +463,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dezert_salate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="115">
+          <caret line="5" column="25" selection-end-line="215" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/salate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>

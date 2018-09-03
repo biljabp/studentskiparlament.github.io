@@ -1,5 +1,18 @@
 <?php
-    include('php-assets/db_config.php');
+include('php-assets/db_config.php');
+$category_id=1;
+if (isset($_GET['category_id'])) {
+    $category_id = $_GET['category_id'];
+}
+else {
+    header('localhost/salate.php?category_id=1');
+}
+$category_name=mysqli_query($connection, "SELECT naziv_kategorije from kategorija where idkategorija=$category_id");
+    $categories_sql="SELECT * from kategorija";
+    $categories_result=mysqli_query($connection, $categories_sql);
+
+    $salads_sql="SELECT * FROM proizvod where kategorija_idkategorija=$category_id";
+    $requested_salad=mysqli_query($connection, $salads_sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,15 +67,9 @@
     </script>
     <noscript><img height="1" width="1" style="display:none"
                    src="https://www.facebook.com/tr?id=536966099993520&ev=PageView&noscript=1"
-    /></noscript>
+        /></noscript>
     <!-- End Facebook Pixel Code -->
-    <?php
-        $salads_sql="SELECT * FROM proizvod where kategorija_idkategorija=2";
-        $desert_salads_results=mysqli_query($connection, $salads_sql);
-        if (mysqli_num_rows($desert_salads_results)>0){
 
-        }
-    ?>
 </head>
 <body>
 <nav class="navbar navbar-custom">
@@ -82,12 +89,16 @@
                 <li><a href="index.php">YUMMY SALADS</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Proizvodi <span class="caret"></span></a>
+
                     <ul class="dropdown-menu">
-                        <li><a href="obrok_salate.php">Obrok salate</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="energetske_salate.php">Energy salate</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="dezert_salate.php">Dessert salate</a></li>
+                        <?php
+                        while ($c=mysqli_fetch_array($categories_result, MYSQLI_ASSOC)) {
+                            ?>
+                            <li><a href="salate.php?category_id=<?php echo $c['idkategorija']; ?>"><?php echo $c['naziv_kategorije']; ?></a></li>
+                            <li role="separator" class="divider"></li>
+                            <?php
+                        }
+                        ?>
                     </ul>
                 </li>
                 <li><a href="o_nama.php">O nama</a></li>
@@ -126,14 +137,21 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 <ul class="list-group">
-    <li class="list-group-item list-group-item-success">DESSERT SALATE</li>
+    <li class="list-group-item list-group-item-success">
+        <?php
+        while ($name=mysqli_fetch_array($category_name, MYSQLI_ASSOC)) {
+            echo strtoupper($name['naziv_kategorije']);
+        }
+        ?>
+
+    </li>
 </ul>
 
 <div class="row">
 
-<?php
-while ($item=mysqli_fetch_array($desert_salads_results, MYSQLI_ASSOC))
-{
+    <?php
+    while ($item=mysqli_fetch_array($requested_salad, MYSQLI_ASSOC))
+    {
         echo "
 <div class=\"col-sm-6 col-md-4 col-lg-3\">
         <div class=\"thumbnail thumbnail-height\">
@@ -149,9 +167,9 @@ while ($item=mysqli_fetch_array($desert_salads_results, MYSQLI_ASSOC))
         </table>
         </div>
     </div>";
-}
+    }
 
-?>
+    ?>
 
 
 </div>
