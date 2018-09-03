@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+    include('php-assets/db_config.php')
+?>
 <html lang="en">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -51,7 +54,13 @@
                    src="https://www.facebook.com/tr?id=536966099993520&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
+    <?php
+    $salads_sql="SELECT * FROM proizvod where kategorija_idkategorija=1";
+    $desert_salads_results=mysqli_query($connection, $salads_sql);
+    if (mysqli_num_rows($desert_salads_results)>0){
 
+    }
+    ?>
 
 </head>
 <body>
@@ -69,20 +78,20 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="index.html">YUMMY SALADS</a></li>
+                <li><a href="index.php">YUMMY SALADS</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Proizvodi <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="obrok_salate.html">Obrok salate</a></li>
+                        <li><a href="obrok_salate.php">Obrok salate</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="energetske_salate.html">Energy salate</a></li>
+                        <li><a href="energetske_salate.php">Energy salate</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="dezert_salate.html">Dessert salate</a></li>
+                        <li><a href="dezert_salate.php">Dessert salate</a></li>
                     </ul>
                 </li>
-                <li><a href="o_nama.html">O nama</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-                <li><a href="ketering.html">Ketering</a></li>
+                <li><a href="o_nama.php">O nama</a></li>
+                <li><a href="kontakt.php">Kontakt</a></li>
+                <li><a href="ketering.php">Ketering</a></li>
                 <li><p onmouseover="myNumber(this)" onmouseout="myNumberOut(this)">Naručite na: 069/1-528-560</p></li>
                 <script>
                     function myNumber(x) {
@@ -106,7 +115,7 @@
         <a href="https://www.instagram.com/teglans/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
     </div>
     <div id="header">
-        <a href="index.html" target="_parent"><img src="images/logo.jpg" style="cursor: pointer"></a>
+        <a href="index.php" target="_parent"><img src="images/logo.jpg" style="cursor: pointer"></a>
         <p>Samo u Yummy Salads objektima. Ako nam vratite 10 praznih teglica nazad, dobijate od nas dve PUNE po Vašem izboru za SAMO 1 RSD.</p>
     </div>
 </div>
@@ -120,66 +129,32 @@
 </ul>
 
 <div class="row">
-    <div class="col-sm-3 col-md-3 col-lg-4">
-        <div class="thumbnail thumbnail-height">
-            <img src="images/obrok/bacon_salad.jpeg" alt="picture">
-            <div class="caption">
-                <h3>Bacon Salad (320g)</h3>
-                <p>penne, cherry, pančeta, trapist, kukuruz, zelene i crne masline, crveni luk, cream dressing</p>
-            </div>
-        </div>
-    </div>
 
-    <div class="col-sm-3 col-md-3 col-lg-4">
-        <div class="thumbnail thumbnail-height">
-            <img src="images/obrok/beetroot_salad.jpeg" alt="picture">
-            <div class="caption">
-                <h3>Beetroot Chicken (330g)</h3>
-                <p>piletina, cherry, brokoli, crne i zelene masline, bademi, cvekla, kornišoni, jabuke, cream dressing</p>
+    <?php
+    while ($item=mysqli_fetch_array($desert_salads_results, MYSQLI_ASSOC))
+    {
+        echo "
+<div class=\"col-sm-6 col-md-4 col-lg-3\">
+        <div class=\"thumbnail thumbnail-height\">
+            <img src=\"".$item['image']."\" alt=\"picture\">
+            <div class=\"caption\">
+                <h4>".$item['naziv_proizvoda']."</h4>
+                <p>".$item['opis']."</p>
             </div>
+        <table class='table text-center'>
+            <tr><th>Masa</th><th>Cena</th></tr>
+            <tr><td>".$item['tezina']."g"."</td><td>".$item['cena']."din."."</td></tr>
+            <tr><td colspan='2'><button class='btn col-lg-12 col-md-12 col-xs-12 col-sm-12'>Dodaj u korpu</button> </td></tr>
+        </table>
         </div>
-    </div>
+    </div>";
+    }
 
-    <div class="col-sm-3 col-md-3 col-lg-4">
-        <div class="thumbnail thumbnail-height">
-            <img src="images/obrok/chicken_and_brokoli.jpeg" alt="picture">
-            <div class="caption">
-                <h3>Chicken And Broccoli (300g)</h3>
-                <p>piletina, brokoli, feta, kukuruz, šargarepa, krutoni, hrastov list, cream dressing</p>
-            </div>
-        </div>
-    </div>
+    ?>
 
-    <div class="col-sm-3 col-md-3 col-lg-4">
-        <div class="thumbnail thumbnail-height">
-            <img src="images/obrok/coolen_salad.jpeg" alt="picture">
-            <div class="caption">
-                <h3>Coolen Salad (310g)</h3>
-                <p>kulen, ajvar, spanać, dimljeni sir, jaja, kiseli krastavci, iceberg, grčki jogurt, krutoni</p>
-            </div>
-        </div>
-    </div>
-    <br/>
-    <div class="col-sm-3 col-md-3 col-lg-4">
-        <div class="thumbnail thumbnail-height">
-            <img src="images/obrok/cream_beam.jpeg" alt="picture">
-            <div class="caption">
-                <h3>Cream Beam (270g)</h3>
-                <p>cherry, suvo grožđe, kukuruz, krutoni, praziluk, hrastov list, cream dressing</p>
-            </div>
-        </div>
-    </div>
 
-    <div class="col-sm-3 col-md-3 col-lg-4">
-        <div class="thumbnail thumbnail-height">
-            <img src="images/obrok/cream_bean_posni.jpeg" alt="picture">
-            <div class="caption">
-                <h3>Cream Beam - Posni (270g)</h3>
-                <p>cherry, suvo grožđe, kukuruz, krutoni, praziluk, hrastov list, clear dressing</p>
-            </div>
-        </div>
-    </div>
 </div>
+
 
 <section class="our_client">
     <h4 class="title"><span class="text">Baneri</span></h4>
@@ -230,15 +205,15 @@
                 <ul class="contact">
                     <span>Kontakt</span>
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.php">Home</a>
                     </li>
 
                     <li>
-                        <a href="o_nama.html">O nama</a>
+                        <a href="o_nama.php">O nama</a>
                     </li>
 
                     <li>
-                        <a href="ketering.html">Ketering</a>
+                        <a href="ketering.php">Ketering</a>
                     </li>
 
                 </ul>

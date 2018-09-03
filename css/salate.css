@@ -38,7 +38,7 @@ body {
 }
 
 .thumbnail-height{
-    height:440px;
+    max-height: 500px;
 }
 
 .navbar-custom .navbar-toggle .icon-bar {
@@ -157,3 +157,16 @@ footer{
 .list-group-item-success {
      padding-left: 50px;
 }
+
+.right{
+    float: right;
+}
+
+.left{
+    float: left;
+}
+
+.price{
+ background-color: #226647;
+}
+

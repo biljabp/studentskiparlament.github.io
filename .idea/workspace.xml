@@ -5,57 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22eaad3a-921e-436c-812b-02a0774c386e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/studentskiparlament.github.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/studentskiparlament.github.io.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dezert_salate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/energetske_salate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/DeviceOrientationController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ketering.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ketering.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kontakt.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kontakt.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CSS3DRenderer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/three.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/o_nama.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/o_nama.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obrok_salate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/salate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stylesheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/lib/CSS3DRenderer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/lib/three.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/textures/cube/Park2Small/negx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/textures/cube/Park2Small/negy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/textures/cube/Park2Small/negz.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/textures/cube/Park2Small/posx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/textures/cube/Park2Small/posy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/textures/cube/Park2Small/posz.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/textures/cube/Park2Small/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/textures/cube/Park3Small/negx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/textures/cube/Park3Small/negy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/textures/cube/Park3Small/negz.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/textures/cube/Park3Small/posx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/textures/cube/Park3Small/posy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/textures/cube/Park3Small/posz.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/textures/cube/Park3Small/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/vr_basic.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/cube/Park2Small/negx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/cube/Park2Small/negy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/cube/Park2Small/negz.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/cube/Park2Small/posx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/cube/Park2Small/posy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/cube/Park2Small/posz.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/cube/Park2Small/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/cube/Park3Small/negx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/cube/Park3Small/negy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/cube/Park3Small/negz.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/cube/Park3Small/posx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/cube/Park3Small/posy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/cube/Park3Small/posz.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/textures/cube/Park3Small/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vr_basic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/salate.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/salate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dezert_salate.php" beforeDir="false" afterPath="$PROJECT_DIR$/dezert_salate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obrok_salate.php" beforeDir="false" afterPath="$PROJECT_DIR$/obrok_salate.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,8 +22,37 @@
       <file leaf-file-name="dezert_salate.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dezert_salate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+            <state relative-caret-position="253">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="obrok_salate.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/obrok_salate.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="24" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#3;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#4;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#5;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="salate.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/salate.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="130" column="30" selection-start-line="130" selection-start-column="30" selection-end-line="130" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -99,10 +81,13 @@
       <find>green</find>
       <find>submit</find>
       <find>provera</find>
+      <find>.html</find>
+      <find>thum</find>
     </findStrings>
     <replaceStrings>
       <replace>https://www.facebook.com/yummysaladssu/</replace>
       <replace>_</replace>
+      <replace>.php</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -132,6 +117,10 @@
         <option value="$PROJECT_DIR$/o_nama.html" />
         <option value="$PROJECT_DIR$/kontakt.html" />
         <option value="$PROJECT_DIR$/zivkoPopicKolokvijum.html" />
+        <option value="$PROJECT_DIR$/db_config.php" />
+        <option value="$PROJECT_DIR$/css/salate.css" />
+        <option value="$PROJECT_DIR$/obrok_salate.php" />
+        <option value="$PROJECT_DIR$/dezert_salate.php" />
       </list>
     </option>
   </component>
@@ -158,6 +147,9 @@
     <option name="width" value="1327" />
     <option name="height" value="780" />
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -169,6 +161,11 @@
             <path>
               <item name="studentskiparlament.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="studentskiparlament.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="studentskiparlament.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studentskiparlament.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -220,38 +217,60 @@
       <workItem from="1527860417630" duration="4089000" />
       <workItem from="1529305821410" duration="4853000" />
       <workItem from="1531095386069" duration="48000" />
-      <workItem from="1535992136294" duration="647000" />
+      <workItem from="1535992136294" duration="7583000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20961000" />
+    <option name="totallyTimeSpent" value="27897000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24281392" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="8" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="3" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24281392" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="PHP-CGI Server" order="8" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="2" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="1" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24281392" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="9" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Find" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -260,9 +279,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ketering.css" />
-    <entry file="file://$PROJECT_DIR$/dezert_salate.html" />
-    <entry file="file://$PROJECT_DIR$/energetske_salate.html" />
     <entry file="file://$PROJECT_DIR$/robots.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -412,10 +428,42 @@
     <entry file="file://$PROJECT_DIR$/energetske_salate.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/db_config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/salate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="130" column="30" selection-start-line="130" selection-start-column="30" selection-end-line="130" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/obrok_salate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#2;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#3;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#4;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#5;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dezert_salate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+        <state relative-caret-position="253">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

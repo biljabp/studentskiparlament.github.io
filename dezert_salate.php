@@ -1,3 +1,6 @@
+<?php
+    include('php-assets/.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <!-- Latest compiled and minified CSS -->
@@ -53,7 +56,13 @@
                    src="https://www.facebook.com/tr?id=536966099993520&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
+    <?php
+        $salads_sql="SELECT * FROM proizvod where kategorija_idkategorija=2";
+        $desert_salads_results=mysqli_query($connection, $salads_sql);
+        if (mysqli_num_rows($desert_salads_results)>0){
 
+        }
+    ?>
 </head>
 <body>
 <nav class="navbar navbar-custom">
@@ -70,20 +79,20 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="index.html">YUMMY SALADS</a></li>
+                <li><a href="index.php">YUMMY SALADS</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Proizvodi <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="obrok_salate.html">Obrok salate</a></li>
+                        <li><a href="obrok_salate.php">Obrok salate</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="energetske_salate.html">Energy salate</a></li>
+                        <li><a href="energetske_salate.php">Energy salate</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="dezert_salate.html">Dessert salate</a></li>
+                        <li><a href="dezert_salate.php">Dessert salate</a></li>
                     </ul>
                 </li>
-                <li><a href="o_nama.html">O nama</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-                <li><a href="ketering.html">Ketering</a></li>
+                <li><a href="o_nama.php">O nama</a></li>
+                <li><a href="kontakt.php">Kontakt</a></li>
+                <li><a href="ketering.php">Ketering</a></li>
                 <li><p onmouseover="myNumber(this)" onmouseout="myNumberOut(this)">Naručite na: 069/1-528-560</p></li>
                 <script>
                     function myNumber(x) {
@@ -107,7 +116,7 @@
         <a href="https://www.instagram.com/teglans/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
     </div>
     <div id="header">
-        <a href="index.html" target="_parent"><img src="images/logo.jpg" style="cursor: pointer"></a>
+        <a href="index.php" target="_parent"><img src="images/logo.jpg" style="cursor: pointer"></a>
         <p>Samo u Yummy Salads objektima. Ako nam vratite 10 praznih teglica nazad, dobijate od nas dve PUNE po Vašem izboru za SAMO 1 RSD.</p>
     </div>
 </div>
@@ -121,65 +130,30 @@
 </ul>
 
 <div class="row">
-    <div class="col-sm-3 col-md-4 col-lg-3">
-        <div class="thumbnail thumbnail-height">
-            <img src="images/dezert/choco_cake.jpeg" alt="picture">
-            <div class="caption">
-                <h3>Choco Cake (180g)</h3>
-                <p>Čokoladna kora sa bademom, orahom i čokoladnim kremom, prekrivena filom od crne čokolade.</p>
-            </div>
-        </div>
-    </div>
 
-    <div class="col-sm-3 col-md-4 col-lg-3">
-        <div class="thumbnail thumbnail-height">
-            <img src="images/dezert/home_made_cake.jpeg" alt="picture">
-            <div class="caption">
-                <h3>Home Made Cake (150g)</h3>
-                <p>Korice od belanaca, žuti fil sa ukusom keksa, sos sa korom narandže, komadićima čokoladnog keksa.</p>
+<?php
+while ($item=mysqli_fetch_array($desert_salads_results, MYSQLI_ASSOC))
+{
+        echo "
+<div class=\"col-sm-6 col-md-4 col-lg-3\">
+        <div class=\"thumbnail thumbnail-height\">
+            <img src=\"".$item['image']."\" alt=\"picture\">
+            <div class=\"caption\">
+                <h3>".$item['naziv_proizvoda']."</h3>
+                <p>".$item['opis']."</p>
             </div>
+        <table class='table text-center'>
+            <tr><th>Masa</th><th>Cena</th></tr>
+            <tr><td>".$item['tezina']."g"."</td><td>".$item['cena']."din."."</td></tr>
+            <tr><td colspan='2'><button class='btn col-lg-12 col-md-12 col-xs-12 col-sm-12'>Dodaj u korpu</button> </td></tr>
+        </table>
         </div>
-    </div>
+    </div>";
+}
 
-    <div class="col-sm-3 col-md-4 col-lg-3">
-        <div class="thumbnail thumbnail-height">
-            <img src="images/dezert/homeroche.jpeg" alt="picture">
-            <div class="caption">
-                <h3>Homeroche (150g)</h3>
-                <p>Čokoladni biskvit, fil sa ukusom kafe i čokolade, sloj pečenih lešnika, preliv od mlečne čokolade.</p>
-            </div>
-        </div>
-    </div>
+?>
 
-    <div class="col-sm-3 col-md-4 col-lg-3">
-        <div class="thumbnail thumbnail-height">
-            <img src="images/dezert/monaliza_posno.jpeg" alt="picture">
-            <div class="caption">
-                <h3>Monaliza - Posno (195g)</h3>
-                <p>Kakao biskvit sa orahom i marmeladom, čokoladni fil sa crnom čokoladom, malina sos od kuvanih malina, posuto crvenim ribizlama.</p>
-            </div>
-        </div>
-    </div>
 
-    <div class="col-sm-3 col-md-4 col-lg-3">
-        <div class="thumbnail thumbnail-height">
-            <img src="images/dezert/nugat.jpeg" alt="picture">
-            <div class="caption">
-                <h3>Nugat (165g)</h3>
-                <p>Čokoladni biskvit, lešnik fil sa belom čokoladom, lešnik fil sa čokoladnim kremom, kakao preliv.       </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-3 col-md-4 col-lg-3">
-        <div class="thumbnail thumbnail-height">
-            <img src="images/dezert/teglas_cake_jabuka.jpeg" alt="picture">
-            <div class="caption">
-                <h3>Tegla's Cake - Jabuka (175g)</h3>
-                <p>Žuti biskvit, naizmenično prekriven slojevima žutog krema sa ukusom keksa i jabuka nadeva sa komadićima jabuke, posuto badem listićima.</p>
-            </div>
-        </div>
-    </div>
 </div>
 
 
@@ -208,15 +182,15 @@
                 <ul class="contact">
                     <span>Kontakt</span>
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.php">Home</a>
                     </li>
 
                     <li>
-                        <a href="o_nama.html">O nama</a>
+                        <a href="o_nama.php">O nama</a>
                     </li>
 
                     <li>
-                        <a href="ketering.html">Ketering</a>
+                        <a href="ketering.php">Ketering</a>
                     </li>
 
                 </ul>
