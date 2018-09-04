@@ -1,3 +1,10 @@
+<?php
+include('php-assets/user_session.php');
+$categories_sql="SELECT * from kategorija";
+$categories_result=mysqli_query($connection, $categories_sql);
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <!-- Latest compiled and minified CSS -->
@@ -72,11 +79,14 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Proizvodi <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="obrok_salate.html">Obrok salate</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="energetske_salate.html">Energy salate</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="dezert_salate.html">Dessert salate</a></li>
+                        <?php
+                        while ($c=mysqli_fetch_array($categories_result, MYSQLI_ASSOC)) {
+                            ?>
+                            <li><a href="salate.php?category_id=<?php echo $c['idkategorija']; ?>"><?php echo $c['naziv_kategorije']; ?></a></li>
+                            <li role="separator" class="divider"></li>
+                            <?php
+                        }
+                        ?>
                     </ul>
                 </li>
                 <li><a href="o_nama.html">O nama</a></li>
@@ -95,10 +105,11 @@
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
+    sth
 </nav>
 
 <div class="page-header" align="center">
-    <div class="icons" align="right">
+    <div class="icons" align="left">
         <p>Pratite nas na:</p>
         <a href="https://www.facebook.com/yummysaladssu/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
         <a href="https://twitter.com/teglasns?lang=en"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
@@ -234,7 +245,10 @@
 <p align="center" style="color: white; background-color:#004020">Copyright © salate.me 2017<br/>Ovaj sajt je namenjen isključivo u ŠKOLSKE svrhe</p>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script><!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/salads.js"></script>
 </body>
 </html>

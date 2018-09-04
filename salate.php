@@ -1,6 +1,7 @@
 <?php
-include('php-assets/db_config.php');
+include('php-assets/user_session.php');
 $category_id=1;
+var_dump($_SESSION);
 if (isset($_GET['category_id'])) {
     $category_id = $_GET['category_id'];
 }
@@ -47,6 +48,11 @@ $category_name=mysqli_query($connection, "SELECT naziv_kategorije from kategorij
     <meta name="author" content="BPP team">
     <title>Salad in a jar</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -117,10 +123,16 @@ $category_name=mysqli_query($connection, "SELECT naziv_kategorije from kategorij
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
+    <div class="cart">
+        <button type="button" class="btn btn-info btn-lg right" data-toggle="modal" data-target="#cartModal"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+
+
+            Korpa <span class="iznos_korpe"></span></button>
+    </div>
 </nav>
 
 <div class="page-header" align="center">
-    <div class="icons" align="right">
+    <div class="icons" align="left">
         <p>Pratite nas na:</p>
         <a href="https://www.facebook.com/yummysaladssu/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
         <a href="https://twitter.com/yummysaladssu"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
@@ -132,9 +144,6 @@ $category_name=mysqli_query($connection, "SELECT naziv_kategorije from kategorij
     </div>
 </div>
 <br/>
-
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 <ul class="list-group">
     <li class="list-group-item list-group-item-success">
@@ -163,7 +172,7 @@ $category_name=mysqli_query($connection, "SELECT naziv_kategorije from kategorij
         <table class='table text-center'>
             <tr><th>Masa</th><th>Cena</th></tr>
             <tr><td>".$item['tezina']."g"."</td><td>".$item['cena']."din."."</td></tr>
-            <tr><td colspan='2'><button class='btn col-lg-12 col-md-12 col-xs-12 col-sm-12'>Dodaj u korpu</button> </td></tr>
+            <tr><td colspan='2'><button  data-id='".$item['idproizvod']."' class='add_to_cart btn col-lg-12 col-md-12 col-xs-12 col-sm-12'>Dodaj u korpu</button> </td></tr>
         </table>
         </div>
     </div>";
@@ -225,9 +234,61 @@ $category_name=mysqli_query($connection, "SELECT naziv_kategorije from kategorij
     </div>
 </footer>
 <p align="center" style="color: white; background-color:#004020">Copyright © salate.me 2017<br/>Ovaj sajt je namenjen isključivo u ŠKOLSKE svrhe</p>
+<div id="cartModal" class="modal fade" role="dialog">
 
+</div>
+
+<div id="checkoutModal" class="modal fade" role="dialog">
+    <div id="login-overlay" class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">Prijava</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="well">
+                            <form id="loginForm" method="POST" action="php-assets/login_check.php">
+                                <div class="form-group">
+                                    <label for="username" class="control-label">E-mail</label>
+                                    <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="example@gmail.com">
+                                    <span class="help-block"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="control-label">Lozinka</label>
+                                    <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">
+                                    <span class="help-block"></span>
+                                </div>
+                                <div id="loginErrorMsg" class="alert alert-error hide">Pogrešni login podaci</div>
+
+                                <button type="submit" class="btn btn-success btn-block">Prijavi se</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <p class="lead">Registrij se sada <span class="text-success">BESPLATNO JE</span></p>
+                        <ul class="list-unstyled" style="line-height: 2">
+                            <li><span class="fa fa-check text-success"></span> Pregled svih porudžbina</li>
+                            <li><span class="fa fa-check text-success"></span> Brzo naručivanje</li>
+                            <li><span class="fa fa-check text-success"></span> Omiljene porudžbine</li>
+                        </ul>
+                        <p><a href="register.php" class="btn btn-info btn-block">Registruj se!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script><!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Latest compiled and minified JavaScript -->
+<script src="js/salads.js">
+
+</script><!-- Include all compiled plugins (below), or include individual files as needed -->
 </body>
 </html>
