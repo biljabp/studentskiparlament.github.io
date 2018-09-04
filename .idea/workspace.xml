@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22eaad3a-921e-436c-812b-02a0774c386e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dezert_salate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/energetske_salate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ketering.php" beforeDir="false" afterPath="$PROJECT_DIR$/ketering.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kontakt.php" beforeDir="false" afterPath="$PROJECT_DIR$/kontakt.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/o_nama.php" beforeDir="false" afterPath="$PROJECT_DIR$/o_nama.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obrok_salate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/php-assets/user_session.php" beforeDir="false" afterPath="$PROJECT_DIR$/php-assets/user_session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salate.php" beforeDir="false" afterPath="$PROJECT_DIR$/salate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/post-remove-one-from-cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/post-remove-one-from-cart.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,8 +43,8 @@
       <file leaf-file-name="podrudzbina.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/podrudzbina.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="215" column="9" lean-forward="true" selection-start-line="215" selection-start-column="9" selection-end-line="215" selection-end-column="9" />
+            <state relative-caret-position="301">
+              <caret line="214" column="2" lean-forward="true" selection-start-line="214" selection-start-column="2" selection-end-line="214" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -61,8 +52,8 @@
       <file leaf-file-name="post-remove-one-from-cart.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ajax/post-remove-one-from-cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+            <state relative-caret-position="138">
+              <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -178,8 +169,8 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/php-assets/verify_account.php" />
         <option value="$PROJECT_DIR$/ajax/post_update_cart.php" />
-        <option value="$PROJECT_DIR$/ajax/post-remove-one-from-cart.php" />
         <option value="$PROJECT_DIR$/podrudzbina.php" />
+        <option value="$PROJECT_DIR$/ajax/post-remove-one-from-cart.php" />
       </list>
     </option>
   </component>
@@ -200,7 +191,7 @@
       <path value="$PROJECT_DIR$/../../php" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -289,15 +280,15 @@
       <workItem from="1527860417630" duration="4089000" />
       <workItem from="1529305821410" duration="4853000" />
       <workItem from="1531095386069" duration="48000" />
-      <workItem from="1535992136294" duration="35735000" />
+      <workItem from="1535992136294" duration="37076000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56049000" />
+    <option name="totallyTimeSpent" value="57390000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -564,13 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="207" column="33" lean-forward="true" selection-end-line="298" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/salads.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
@@ -592,20 +576,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/post-remove-one-from-cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ajax/post_update_cart.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="207" column="33" lean-forward="true" selection-end-line="298" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/post-remove-one-from-cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/podrudzbina.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="215" column="9" lean-forward="true" selection-start-line="215" selection-start-column="9" selection-end-line="215" selection-end-column="9" />
+        <state relative-caret-position="301">
+          <caret line="214" column="2" lean-forward="true" selection-start-line="214" selection-start-column="2" selection-end-line="214" selection-end-column="2" />
         </state>
       </provider>
     </entry>
