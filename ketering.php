@@ -75,7 +75,7 @@ $categories_result=mysqli_query($connection, $categories_sql);
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="index.html">YUMMY SALADS</a></li>
+                <li><a href="index.php">YUMMY SALADS</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Proizvodi <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -89,9 +89,9 @@ $categories_result=mysqli_query($connection, $categories_sql);
                         ?>
                     </ul>
                 </li>
-                <li><a href="o_nama.html">O nama</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-                <li><a href="ketering.html">Ketering</a></li>
+                <li><a href="o_nama.php">O nama</a></li>
+                <li><a href="kontakt.php">Kontakt</a></li>
+                <li><a href="ketering.php">Ketering</a></li>
                 <li><p onmouseover="myNumber(this)" onmouseout="myNumberOut(this)">Naručite na: 069/1-528-560</p></li>
                 <script>
                     function myNumber(x) {
@@ -115,7 +115,7 @@ $categories_result=mysqli_query($connection, $categories_sql);
         <a href="https://www.instagram.com/teglans/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
     </div>
     <div id="header">
-        <a href="index.html" target="_parent"><img src="images/logo.jpg" style="cursor: pointer"></a>
+        <a href="index.php" target="_parent"><img src="images/logo.jpg" style="cursor: pointer"></a>
         <p>Samo u Yummy Salads objektima. Ako nam vratite 10 praznih teglica nazad, dobijate od nas dve PUNE po Vašem izboru za SAMO 1 RSD.</p>
     </div>
 </div>
@@ -187,15 +187,15 @@ $categories_result=mysqli_query($connection, $categories_sql);
                 <ul class="contact">
                     <span>Kontakt</span>
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.php">Home</a>
                     </li>
 
                     <li>
-                        <a href="o_nama.html">O nama</a>
+                        <a href="o_nama.php">O nama</a>
                     </li>
 
                     <li>
-                        <a href="ketering.html">Ketering</a>
+                        <a href="ketering.php">Ketering</a>
                     </li>
 
                 </ul>

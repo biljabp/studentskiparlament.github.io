@@ -124,7 +124,7 @@ $categories_result=mysqli_query($connection, $categories_sql);
                                             <h6><strong>".$row['cena']."din <span class=\"text-muted\"> x</span></strong></h6>
                                         </div>
                                         <div class=\"col-lg-4\">
-                                            <input type=\"text\" class=\"form-control input-sm product_amount \" data-price='".$row['cena']."' value=\"".$counted_arrays[$row['idproizvod']]."\">
+                                            <input type=\"text\" class=\"form-control input-sm product_amount input-with-data \" data-naziv=\"".$row['naziv_proizvoda']."\" id='valuedInput".$row['idproizvod']."'  data-id=\"".$row['idproizvod']."\" data-price='".$row['cena']."' value=\"".$counted_arrays[$row['idproizvod']]." \" disabled>
                                             <button class='btn add_this' data-id='".$row['idproizvod']."'>+</button>
                                             <button class='btn remove_this' data-id='".$row['idproizvod']."'>-</button>
 
@@ -167,11 +167,10 @@ $categories_result=mysqli_query($connection, $categories_sql);
                                 <div class=\"row text-center\">
                                     <div class=\"col-lg-9\">
                                         <h4 class=\"text-right\">Ukupno <strong id='konacna_cena'>$ukcena</strong></h4>
-                                    </div>
+                                    </div>  
                                     <div class=\"col-lg-3\">
                                         <button type=\"button\" data-toggle=\"modal\" 
-                                        data-target=\"#checkoutModal\" 
-                                        data-dismiss=\"modal\"  class=\"btn btn-success btn-md\" id='checkout'>
+                                          class=\"btn btn-success btn-md\" id='modalCheckout'>
                                             Dovrši porudžbinu
                                         </button>
                                     </div>
@@ -179,7 +178,7 @@ $categories_result=mysqli_query($connection, $categories_sql);
                             </div>
                         </div>
                     </div>
-
+                    <input type='hidden' id='invisible' data-target=\"#dovrsiModal\" data-dismiss=\"modal\"> 
     </div>
 </div>
 ";
@@ -188,6 +187,30 @@ echo $output;    ?>
 
 
 </div>
+
+    <div id="dovrsiModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Uspešno</h4>
+                </div>
+                <div class="modal-body">
+
+                    <h1>Uspešno unešena porudžbina, porudžbina je prosleđena vlasnicima!</h1>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
 </body>
 
 <script >
@@ -206,12 +229,54 @@ $('document').ready(function () {
     })
 
     $('.add_this').click(function () {
-        $.post('ajax/post-add-to-cart.php', {'product_id':$(this).data('id')})
+        var nameId="#valuedInput"+$(this).data('id');
+        $.post('ajax/post-add-to-cart.php', {'product_id':$(this).data('id')}, function (data) {
+
+            $(nameId).val(data)
+        })
     })
 
     $('.remove_this').click(function () {
-        $.post('ajax/post-remove-one-from-cart.php', {'product_id':$(this).data('id')})
+        var nameId="#valuedInput"+$(this).data('id');
+        $.post('ajax/post-remove-one-from-cart.php', {'product_id':$(this).data('id')}, function (data) {
+            $(nameId).val(data)
+        })
     })
+
+    $( document ).ajaxComplete(function() {
+        var konacna=0;
+
+            $('.product_amount').each(function () {
+                konacna+=$(this).data('price')*$(this).val();
+                console.log(konacna);
+                $('#konacna_cena').html(konacna)
+            })
+        });
+        $('#modalCheckout').click(function (e) {
+            e.preventDefault();
+            $.post('ajax/insert-cart.php', {
+                'user_id':"<?php echo $_SESSION['user']?>"
+            }, function () {
+                $('.input-with-data').each(function () {
+                    var ukupna_cena=0;
+                    var cena=$(this).data("price");
+                    var kolicina=$(this).val();
+                    var id=$(this).data("id");
+                    ukupna_cena=kolicina*cena;
+                    $.post('ajax/order-items.php', {
+                        'cena':ukupna_cena,
+                        'kolicina':kolicina,
+                        'id':id
+                    }, function (data) {
+                        if (data == "Success") {
+                            $('#dovrsiModal').modal('show');
+                        }                    })
+
+                })
+            });
+        })
+
+
 })
 </script>
 

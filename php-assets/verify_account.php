@@ -9,9 +9,15 @@ include ('user_session.php');
 $code=$_GET['code'];
 
 $SQL="UPDATE kupac SET code=1 WHERE code='$code' ";
+$SQL2="SELECT idkupac from kupac where code='$code'";
+$result=mysqli_query($connection, $SQL2);
+while ($c=mysqli_fetch_array($result, MYSQLI_ASSOC)){
+    $_SESSION['user']=$c['idkupac'];
+}
 
 if (mysqli_query($connection, $SQL)) {
-    header('../porudzbina.php?registracija=uspesna');
+    echo "Uspesno ste verifikovali nalog";
+    header('Location:../porudzbina.php');
 } else {
     echo "Error: " . $SQL . "<br>" . mysqli_error($connection);
 }

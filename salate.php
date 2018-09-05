@@ -1,7 +1,6 @@
 <?php
 include('php-assets/user_session.php');
 $category_id=1;
-var_dump($_SESSION);
 if (isset($_GET['category_id'])) {
     $category_id = $_GET['category_id'];
 }
@@ -287,7 +286,7 @@ $category_name=mysqli_query($connection, "SELECT naziv_kategorije from kategorij
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script><!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- Latest compiled and minified JavaScript -->
-<script src="js/salads.js">
+<script src="js/cart.js">
 
 </script><!-- Include all compiled plugins (below), or include individual files as needed -->
 </body>

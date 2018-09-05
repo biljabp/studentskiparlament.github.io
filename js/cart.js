@@ -119,7 +119,15 @@ $('document').ready(function () {
     });
 
 });
+$( document ).ajaxComplete(function() {
+    var konacna=0;
 
+    $('.product_amount').each(function () {
+        konacna+=$(this).data('price')*$(this).val();
+        console.log(konacna);
+        $('#konacna_cena').html(konacna)
+    })
+})
 
 $('#korisnik_postojeci').click(function () {
     console.log("POSTOJECI KORISNIK")
