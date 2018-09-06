@@ -1,7 +1,6 @@
 <?php
 include('php-assets/user_session.php');
 $category_id=1;
-var_dump($_SESSION);
 if (isset($_GET['category_id'])) {
     $category_id = $_GET['category_id'];
 }
@@ -50,6 +49,7 @@ $requested_salad=mysqli_query($connection, $salads_sql);
 
 
 </head>
+
 <body>
 <nav class="navbar navbar-custom">
     <div class="container-fluid">
@@ -145,6 +145,7 @@ $requested_salad=mysqli_query($connection, $salads_sql);
             <label class="control-label col-sm-4" for="email"> Vaš email:</label>
             <div class="col-sm-8">
                 <input type="email" class="form-control first_form" name="email" id="email" placeholder="Unesite Vašu email adresu" tabindex="7" required>
+                <p name="message" id="message"></p>
             </div>
         </div>
         <!-- Password -->
@@ -174,6 +175,30 @@ $requested_salad=mysqli_query($connection, $salads_sql);
 </form>
 </div>
 
+<div id="email_in_use" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Nespešno</h4>
+            </div>
+            <div class="modal-body">
+
+                <h1>Email je vec u upotrebi!</h1>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</body>
+
 <script
     src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -185,11 +210,12 @@ $requested_salad=mysqli_query($connection, $salads_sql);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha384-FzT3vTVGXqf7wRfy8k4BiyzvbNfeYjK+frTVqZeNDFl8woCbF0CYG6g2fMEFFo/i" crossorigin="anonymous"></script>
 <script>
     $('document').ready(function () {
+
         $("#register_form_id").validate({
             rules: {
-                name:{
-                    required:true,
-                    rangelength:[6, 60],
+                name: {
+                    required: true,
+                    rangelength: [6, 60],
                 },
                 password: {
                     required: true,
@@ -208,7 +234,10 @@ $requested_salad=mysqli_query($connection, $salads_sql);
                 city: "required",
                 address: "required"
             }
+
+
         });
+
 
 
         $('#registration_submit_button').click(function () {
@@ -228,17 +257,17 @@ $requested_salad=mysqli_query($connection, $salads_sql);
                             phone: "required",
                             email: {
                                 required: true,
-                                email: true
+                                email: true,
+
                             },
                             postal_code: "required",
                             city: "required",
                             address: "required"
                         }
+
                     });
                 },  // pre-submit callback
-                success: function () {
-                    window.location.href = 'index.php#potrvdinalog';
-                },  // post-submit callback
+                success: showResponse(),  // post-submit callback
 
                 // other available options:
                 //url:       url         // override for form's 'action' attribute
@@ -274,6 +303,13 @@ $requested_salad=mysqli_query($connection, $salads_sql);
 
             // post-submit callback
             function showResponse(responseText, statusText, xhr, $form) {
+                if (responseText=='da'){
+                    window.location.href = 'index.php#potrvdinalog';
+                } else
+                {
+                    window.location.href = 'register.php?#email_in_use';
+
+                }
                 // for normal html responses, the first argument to the success callback
                 // is the XMLHttpRequest object's responseText property
 
@@ -289,13 +325,27 @@ $requested_salad=mysqli_query($connection, $salads_sql);
                     '\n\nThe output div should have already been updated with the responseText.');
 
             }
-            $('#register_form_id').submit();
+
+            $('#myForm').submit();
 
 
         });
-
     });
 
+
 </script>
-</body>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        if(window.location.hash) {
+            var hash = window.location.hash;
+            console.log(hash); // Show bootstrap modal id in console
+            if ( $( hash ).hasClass('modal') ) {
+                setTimeout(function () {
+                    $(hash).modal('show');
+                }, 1000)
+            }
+        }
+    });
+</script>
 </html>

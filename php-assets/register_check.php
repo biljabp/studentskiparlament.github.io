@@ -1,37 +1,46 @@
 <?php
 include('user_session.php');
-$name=mysqli_real_escape_string($connection,$_POST['name']);
-$phone=mysqli_real_escape_string($connection,$_POST['phone']);
-$password=mysqli_real_escape_string($connection,$_POST['password']);
-$confirm=mysqli_real_escape_string($connection,$_POST['password_confirm']);
-$email=mysqli_real_escape_string($connection,$_POST['email']);
-$postal_code=mysqli_real_escape_string($connection,$_POST['postal_code']);
-$city=mysqli_real_escape_string($connection,$_POST['city']);
-$address=mysqli_real_escape_string($connection,$_POST['address']);
-if ($password==$confirm){
-    $password=md5($password);
+$name = mysqli_real_escape_string($connection, $_POST['name']);
+$phone = mysqli_real_escape_string($connection, $_POST['phone']);
+$password = mysqli_real_escape_string($connection, $_POST['password']);
+$confirm = mysqli_real_escape_string($connection, $_POST['password_confirm']);
+$email = mysqli_real_escape_string($connection, $_POST['email']);
+$postal_code = mysqli_real_escape_string($connection, $_POST['postal_code']);
+$city = mysqli_real_escape_string($connection, $_POST['city']);
+$address = mysqli_real_escape_string($connection, $_POST['address']);
+if ($password == $confirm) {
+    $password = md5($password);
 }
+if (isset($_POST['email'])) {
+    $SQL = "SELECT email from kupac where email='$email'";
+    $result = mysqli_query($connection, $SQL);
+    if ($result) {
+        $kupac = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        if ($kupac['email'] == $email) {
+            echo "ne";
+//            header('Location: ../register.php?#email_in_use');
+        } else {
+            echo "da";
+            $code = md5(time());
 
-$code=md5(time());
-
-$SQL="INSERT INTO kupac ( ime, email, password, ulica_broj, mesto, post_broj,  code) 
+            $SQL = "INSERT INTO kupac ( ime, email, password, ulica_broj, mesto, post_broj,  code) 
 VALUES ('$name', '$email', '$password', '$address', '$city', '$postal_code', '$code')";
 
-if (mysqli_query($connection, $SQL)) {
+            if (mysqli_query($connection, $SQL)) {
 
-    header ('Location: ../index.php#potrvdinalog');
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $SQL . "<br>" . mysqli_error($connection);
-}
-$subject = 'Verifikacioni kod | Teglas salate';
+                header('Location: ../index.php#potrvdinalog');
+                echo "New record created successfully";
+            } else {
+                echo "Error: " . $SQL . "<br>" . mysqli_error($connection);
+            }
+            $subject = 'Verifikacioni kod | Teglas salate';
 
-$headers = "From: support@teglas.com\r\n";
-$headers .= "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+            $headers = "From: support@teglas.com\r\n";
+            $headers .= "MIME-Version: 1.0\r\n";
+            $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
 
-$message = <<< PORUKA
+            $message = <<< PORUKA
 <!DOCTYPE html>
 <html>
 <head>
@@ -88,9 +97,14 @@ font-weight: 900;
 </html> 
 PORUKA;
 
-mail($email, $subject, $message, $headers);
+            mail($email, $subject, $message, $headers);
+
+            echo "da";
+        }
+
+    }
 
 
-
+}
 
 ?>

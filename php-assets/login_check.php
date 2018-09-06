@@ -9,7 +9,7 @@ include ('user_session.php');
 $email=mysqli_escape_string($connection, $_POST['email']);
 $password=md5(mysqli_escape_string($connection, $_POST['password']));
 
-$SQL="SELECT * from kupac WHERE email='$email'and password='$password'";
+$SQL="SELECT * from kupac WHERE email='$email'and password='$password' and code='1'";
 echo $email."<br>".$password;
 
 $result=mysqli_query($connection, $SQL);

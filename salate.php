@@ -109,6 +109,21 @@ $category_name=mysqli_query($connection, "SELECT naziv_kategorije from kategorij
                 <li><a href="o_nama.php">O nama</a></li>
                 <li><a href="kontakt.php">Kontakt</a></li>
                 <li><a href="ketering.php">Ketering</a></li>
+                <?php
+                if (isset($_SESSION['user'])){
+                    ?>
+                    <li><a href="user_profile.php">Moj Profil</a></li>
+                    <li class="right"><a href="php-assets/logout.php">Odjavi se</a> </li>
+                    <?php
+                }
+                else {
+                    ?>
+                    <li><a data-toggle="modal" data-target="#checkoutModal"">Prijava</a></li>
+
+
+                    <?php
+                }
+                ?>
                 <li><p onmouseover="myNumber(this)" onmouseout="myNumberOut(this)">Naručite na: 069/1-528-560</p></li>
                 <script>
                     function myNumber(x) {
@@ -124,8 +139,6 @@ $category_name=mysqli_query($connection, "SELECT naziv_kategorije from kategorij
     </div><!-- /.container-fluid -->
     <div class="cart">
         <button type="button" class="btn btn-info btn-lg right" data-toggle="modal" data-target="#cartModal"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
-
-
             Korpa <span class="iznos_korpe"></span></button>
     </div>
 </nav>
@@ -183,6 +196,7 @@ $category_name=mysqli_query($connection, "SELECT naziv_kategorije from kategorij
 </div>
 
 
+
 <footer>
     <div class="container">
         <div class="row">
@@ -236,7 +250,7 @@ $category_name=mysqli_query($connection, "SELECT naziv_kategorije from kategorij
 <div id="cartModal" class="modal fade" role="dialog">
 
 </div>
-
+<?php if(!isset($_SESSION['user'])) {?>
 <div id="checkoutModal" class="modal fade" role="dialog">
     <div id="login-overlay" class="modal-dialog">
         <div class="modal-content">
@@ -279,6 +293,8 @@ $category_name=mysqli_query($connection, "SELECT naziv_kategorije from kategorij
         </div>
     </div>
 </div>
+<?php } ?>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
 <script
@@ -286,7 +302,10 @@ $category_name=mysqli_query($connection, "SELECT naziv_kategorije from kategorij
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script><!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- Latest compiled and minified JavaScript -->
+
 <script src="js/cart.js">
+
+
 
 </script><!-- Include all compiled plugins (below), or include individual files as needed -->
 </body>

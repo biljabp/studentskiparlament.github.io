@@ -96,7 +96,7 @@ $user=mysqli_fetch_array($userResult, MYSQLI_ASSOC);
 <div class="container">
 <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
     <div class="img-responsive">
-        <img src="https://www.brandeps.com/icon-download/U/User-01.svg">
+        <img src="images/user.svg">
     </div>
     <div>
         <h3>Korisnicki podaci</h3>

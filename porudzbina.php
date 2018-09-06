@@ -94,10 +94,12 @@ $categories_result=mysqli_query($connection, $categories_sql);
 
 </nav>
 <div class="container">
-<h1>Da biste dovrsili vasu porudzbinu, morate da potvrdite jos jednom</h1>
     <?php
 
     $string="(";
+
+    if (!empty($_SESSION['cart'])){
+        echo "<h1>Da biste dovrsili vasu porudzbinu, morate da potvrdite jos jednom</h1>";
 
     foreach ($_SESSION['cart'] as $id) {
         $string.=$id.', ';
@@ -125,11 +127,7 @@ $categories_result=mysqli_query($connection, $categories_sql);
                                             <button class='btn remove_this' data-id='".$row['idproizvod']."'>-</button>
 
                                         </div>
-                                        <div class=\"col-lg-2\">
-                                            <button type=\"button\" class=\"btn btn-link btn-lg remove_from_cart\" data-id='".$row['idproizvod']."'>
-                                                <span class=\"glyphicon glyphicon-trash\"> </span>
-                                            </button>
-                                        </div>
+                                     
                                     </div>
                                     </div>
                                      <hr>
@@ -178,7 +176,10 @@ $categories_result=mysqli_query($connection, $categories_sql);
     </div>
 </div>
 ";
-echo $output;    ?>
+echo $output; }  else {
+        echo "<h1>Korpa je prazna, porudzbine nema!";
+    }  ?>
+
 
 
 
@@ -267,6 +268,10 @@ $('document').ready(function () {
                         if (data == "Success") {
                             $('#dovrsiModal').modal('show');
                         }                    })
+
+                })
+                $.post('ajax/cart-empty.php', function () {
+                    location.reload();
 
                 })
             });
