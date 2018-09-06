@@ -16,8 +16,12 @@ while ($c=mysqli_fetch_array($result, MYSQLI_ASSOC)){
 }
 
 if (mysqli_query($connection, $SQL)) {
+    if (empty($_SESSION['cart'])){
+        header('Location: ../salate.php');
+    } else {
     echo "Uspesno ste verifikovali nalog";
     header('Location:../porudzbina.php');
+    }
 } else {
     echo "Error: " . $SQL . "<br>" . mysqli_error($connection);
 }

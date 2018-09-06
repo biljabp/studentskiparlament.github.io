@@ -166,7 +166,7 @@ $requested_salad=mysqli_query($connection, $salads_sql);
         <!-- Final Button -->
         <div class="form-group">
             <div class="col-sm-offset-4 col-sm-8">
-                <button id="registration_submit_button" type="button" class="btn btn-default" tabindex="11">Pošaljite registraciju <i class="fa fa-check-circle" aria-hidden="true"></i></button>
+                <button id="registration_submit_button" type="submit"  class="btn btn-default" tabindex="11">Pošaljite registraciju <i class="fa fa-check-circle" aria-hidden="true"></i></button>
             </div>
         </div>
     </div>
@@ -236,7 +236,9 @@ $requested_salad=mysqli_query($connection, $salads_sql);
                         }
                     });
                 },  // pre-submit callback
-                success: showResponse,  // post-submit callback
+                success: function () {
+                    window.location.href = 'index.php#potrvdinalog';
+                },  // post-submit callback
 
                 // other available options:
                 //url:       url         // override for form's 'action' attribute

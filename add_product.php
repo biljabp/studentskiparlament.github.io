@@ -5,7 +5,7 @@
  * Date: 04/09/2018
  * Time: 05:38
  */
-include ('php-assets/profile_session.php');
+include ('php-assets/admin_session.php');
 if(isset($_GET['registracija']) && $_GET['registracija']=='uspesna'){
 
 }
@@ -13,10 +13,7 @@ if(isset($_GET['registracija']) && $_GET['registracija']=='uspesna'){
 $categories_sql="SELECT * from kategorija";
 $categories_result=mysqli_query($connection, $categories_sql);
 
-$userid=$_SESSION['user'];
-$userSQL="SELECT * from kupac WHERE idkupac=$userid";
-$userResult=mysqli_query($connection, $userSQL);
-$user=mysqli_fetch_array($userResult, MYSQLI_ASSOC);
+$admin=$_SESSION['admin'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,6 +71,7 @@ $user=mysqli_fetch_array($userResult, MYSQLI_ASSOC);
 
                     <ul class="dropdown-menu">
                         <?php
+
                         while ($c=mysqli_fetch_array($categories_result, MYSQLI_ASSOC)) {
                             ?>
                             <li><a href="salate.php?category_id=<?php echo $c['idkategorija']; ?>"><?php echo $c['naziv_kategorije']; ?></a></li>
@@ -83,7 +81,7 @@ $user=mysqli_fetch_array($userResult, MYSQLI_ASSOC);
                         ?>
                     </ul>
                 </li>
-                <li><a href="prethodne_porudzbine.php">Prethodne porudžbine</a></li>
+                <li><a href="admin_panel.php">Profil</a></li>
                 <li class="right"><a href="php-assets/logout.php">Odjavi se</a> </li>
 
             </ul>
@@ -94,77 +92,71 @@ $user=mysqli_fetch_array($userResult, MYSQLI_ASSOC);
 
 
 <div class="container">
-<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
-    <div class="img-responsive">
-        <img src="https://www.brandeps.com/icon-download/U/User-01.svg">
-    </div>
-    <div>
-        <h3>Korisnicki podaci</h3>
-    </div>
-    <table class="table table-responsive">
-        <tr><td><?php echo $user['ime'] ?> </td></tr>
-        <tr><td><?php echo $user['email'] ?> <td></tr>
-        <tr><td><?php echo $user['ulica_broj'] ?> <td></tr>
-        <tr><td><?php echo $user['mesto'] ?> <td></tr>
-        <tr><td><?php echo $user['post_broj'] ?> <td></tr>
 
+    <form id="myForm" action="php-assets/insert_product.php" method="post">
+            <div class="form-group">
+                <input class="form-control" id="name" name="name" placeholder="Pileci specijal...">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" id="opis" name="opis" placeholder="Najbolje jelo"></textarea>
+            </div>
+        <div class="form-group">
+        <select class="form-control" name="select"  id="select">
+            <?php
+            $categories_sql="SELECT * from kategorija";
+            $categories_result=mysqli_query($connection, $categories_sql);
 
-    </table>
-</div>
-    <div class="col-lg-10 col-md-9 col-sm-6 col-xs-12">
-        <div class="page-header">
-            <h1>Aktivne porudžbine </h1>
+            while ($c=mysqli_fetch_array($categories_result, MYSQLI_ASSOC)) {
 
-                <?php
-                $SQLporudzbine="SELECT * from porudzbina WHERE kupac_idkupac=$userid";
-                $resultPorudzbine=mysqli_query($connection, $SQLporudzbine);
-                while ($row=mysqli_fetch_array($resultPorudzbine,MYSQLI_ASSOC)) {
-                    $status = "";
-                    if ($row['status'] == 1) {
-                        echo "
-                    <div class=\"panel panel-info\">
-                    <div class=\"panel-heading\">Pošiljka u pripremi</div>
-                    <div class=\"panel-body\">
-                        <table class='table'>
-                            <tr><th>Broj porudzbine</th><td>" . $row['broj_posiljke'] . "</td></tr>
-                            <tr><th>Iznos posiljke</th><td>" . $row['ukupan_iznos'] . "</td></tr>
-                            <tr><th>Vreme porucivanja</th><td>" . $row['datum_porudzbine'] . "</td></tr>
-                        </table>
-                    </div>
-                </div>
-                ";
-                    } else if ($row['status'] == 2) {
-                        echo "
-                    <div class=\"panel panel-default\">
-                    <div class=\"panel-heading\">Pošiljka pripremljena</div>
-                    <div class=\"panel-body\">
-                        <table class='table'>
-                            <tr><th>Broj porudzbine</th><td>" . $row['broj_posiljke'] . "</td></tr>
-                            <tr><th>Iznos posiljke</th><td>" . $row['ukupan_iznos'] . "</td></tr>
-                            <tr><th>Vreme porucivanja</th><td>" . $row['datum_porudzbine'] . "</td></tr>
-                        </table>
-                            <button class='btn btn-danger right porudzbina_primljena' data-id='".$row['idporudzbina']."'>Primljeno</button>
-
-                    </div>
-                </div>
-                ";
-                    }
-                }
-                ?>
-
+                echo "<option value=\"".$c['idkategorija']."\">".$c['naziv_kategorije']."</option>";
+            }
+            ?>
+        </select>
         </div>
-    </div>
+        <div class="form-group">
+            <input class="form-control" id="cena" name="cena" placeholder="235din...">
+        </div>
+        <div class="form-group">
+            <input class="form-control" id="masa" name="masa" placeholder="180g...">
+        </div>
+        <button class="btn btn-success" type="submit" id="dodajProizvod">Unesi proizvod</button>
+
+
+
+
+    </form>
+
 </div>
 </body>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/localization/messages_sr_lat.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha384-FzT3vTVGXqf7wRfy8k4BiyzvbNfeYjK+frTVqZeNDFl8woCbF0CYG6g2fMEFFo/i" crossorigin="anonymous"></script>
 <script>
-    $('.porudzbina_primljena').click(function () {
-        var id=$(this).data('id');
-        $.post('ajax/received-order.php', {
-            'id_porudzbine':id
-        }, function (data) {
-            location.reload();
+    $("#myForm").validate({
+        rules: {
+            name: {
+                required: true,
+                rangelength: [4, 32]
 
-        })
+            },
+            select: "required",
+            cena: {
+                required: true,
+                number: true
+            },
+            masa: {
+                required: true,
+                number: true
+            }
+        }
+    });
 
-    })</script>
+
+
+</script>
 </html>

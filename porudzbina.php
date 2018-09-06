@@ -5,11 +5,7 @@
  * Date: 04/09/2018
  * Time: 05:38
  */
-include ('php-assets/user_session.php');
-if(isset($_GET['registracija']) && $_GET['registracija']=='uspesna'){
-
-}
-
+include ('php-assets/profile_session.php');
 $categories_sql="SELECT * from kategorija";
 $categories_result=mysqli_query($connection, $categories_sql);
 
@@ -83,16 +79,15 @@ $categories_result=mysqli_query($connection, $categories_sql);
                 <li><a href="o_nama.php">O nama</a></li>
                 <li><a href="kontakt.php">Kontakt</a></li>
                 <li><a href="ketering.php">Ketering</a></li>
-                <li><p onmouseover="myNumber(this)" onmouseout="myNumberOut(this)">Naručite na: 069/1-528-560</p></li>
-                <script>
-                    function myNumber(x) {
-                        x.style.color= "#46B778";
-                    }
 
-                    function myNumberOut(x) {
-                        x.style.color= "white";
-                    }
-                </script>
+                <?php
+                if (isset($_SESSION['user'])){
+                    ?>
+                    <li><a href="user_profile.php">Moj Profil</a></li>
+                    <li class="right"><a href="php-assets/logout.php">Odjavi se</a> </li>
+                    <?php
+                }?>
+
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -101,7 +96,9 @@ $categories_result=mysqli_query($connection, $categories_sql);
 <div class="container">
 <h1>Uspesno ste se registrovali. Da biste dovrsili vasu porudzbinu, morate da potvrdite jos jednom</h1>
     <?php
+
     $string="(";
+
     foreach ($_SESSION['cart'] as $id) {
         $string.=$id.', ';
     }

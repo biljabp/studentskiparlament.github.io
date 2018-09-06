@@ -197,7 +197,14 @@ $categories_result=mysqli_query($connection, $categories_sql);
                     <li>
                         <a href="ketering.php">Ketering</a>
                     </li>
-
+                    <?php
+                    if (isset($_SESSION['user'])){
+                        ?>
+                        <li><a href="user_profile.php.php">Moj Profil</a></li>
+                        <li class="right"><a href="php-assets/logout.php">Odjavi se</a> </li>
+                        <?php
+                    }
+                    ?>
                 </ul>
             </div>
 

@@ -5,7 +5,7 @@
  * Date: 04/09/2018
  * Time: 05:38
  */
-include ('php-assets/profile_session.php');
+include ('php-assets/admin_session.php');
 if(isset($_GET['registracija']) && $_GET['registracija']=='uspesna'){
 
 }
@@ -13,10 +13,7 @@ if(isset($_GET['registracija']) && $_GET['registracija']=='uspesna'){
 $categories_sql="SELECT * from kategorija";
 $categories_result=mysqli_query($connection, $categories_sql);
 
-$userid=$_SESSION['user'];
-$userSQL="SELECT * from kupac WHERE idkupac=$userid";
-$userResult=mysqli_query($connection, $userSQL);
-$user=mysqli_fetch_array($userResult, MYSQLI_ASSOC);
+$admin=$_SESSION['admin'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,7 +80,7 @@ $user=mysqli_fetch_array($userResult, MYSQLI_ASSOC);
                         ?>
                     </ul>
                 </li>
-                <li><a href="prethodne_porudzbine.php">Prethodne porudžbine</a></li>
+                <li><a href="add_product.php">Dodaj salatu</a></li>
                 <li class="right"><a href="php-assets/logout.php">Odjavi se</a> </li>
 
             </ul>
@@ -94,77 +91,76 @@ $user=mysqli_fetch_array($userResult, MYSQLI_ASSOC);
 
 
 <div class="container">
-<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
-    <div class="img-responsive">
-        <img src="https://www.brandeps.com/icon-download/U/User-01.svg">
-    </div>
-    <div>
-        <h3>Korisnicki podaci</h3>
-    </div>
-    <table class="table table-responsive">
-        <tr><td><?php echo $user['ime'] ?> </td></tr>
-        <tr><td><?php echo $user['email'] ?> <td></tr>
-        <tr><td><?php echo $user['ulica_broj'] ?> <td></tr>
-        <tr><td><?php echo $user['mesto'] ?> <td></tr>
-        <tr><td><?php echo $user['post_broj'] ?> <td></tr>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
-
-    </table>
-</div>
-    <div class="col-lg-10 col-md-9 col-sm-6 col-xs-12">
-        <div class="page-header">
-            <h1>Aktivne porudžbine </h1>
-
-                <?php
-                $SQLporudzbine="SELECT * from porudzbina WHERE kupac_idkupac=$userid";
-                $resultPorudzbine=mysqli_query($connection, $SQLporudzbine);
-                while ($row=mysqli_fetch_array($resultPorudzbine,MYSQLI_ASSOC)) {
-                    $status = "";
-                    if ($row['status'] == 1) {
-                        echo "
-                    <div class=\"panel panel-info\">
-                    <div class=\"panel-heading\">Pošiljka u pripremi</div>
-                    <div class=\"panel-body\">
-                        <table class='table'>
-                            <tr><th>Broj porudzbine</th><td>" . $row['broj_posiljke'] . "</td></tr>
-                            <tr><th>Iznos posiljke</th><td>" . $row['ukupan_iznos'] . "</td></tr>
-                            <tr><th>Vreme porucivanja</th><td>" . $row['datum_porudzbine'] . "</td></tr>
-                        </table>
-                    </div>
-                </div>
-                ";
-                    } else if ($row['status'] == 2) {
-                        echo "
-                    <div class=\"panel panel-default\">
-                    <div class=\"panel-heading\">Pošiljka pripremljena</div>
-                    <div class=\"panel-body\">
-                        <table class='table'>
-                            <tr><th>Broj porudzbine</th><td>" . $row['broj_posiljke'] . "</td></tr>
-                            <tr><th>Iznos posiljke</th><td>" . $row['ukupan_iznos'] . "</td></tr>
-                            <tr><th>Vreme porucivanja</th><td>" . $row['datum_porudzbine'] . "</td></tr>
-                        </table>
-                            <button class='btn btn-danger right porudzbina_primljena' data-id='".$row['idporudzbina']."'>Primljeno</button>
-
-                    </div>
-                </div>
-                ";
-                    }
-                }
-                ?>
-
+        <div>
+            <h3>Porudzbine na cekanju</h3>
         </div>
+
+<?php
+$SQLporudzbine="SELECT * from porudzbina WHERE status=1";
+$resultPorudzbine=mysqli_query($connection, $SQLporudzbine);
+while ($row=mysqli_fetch_array($resultPorudzbine,MYSQLI_ASSOC)) {
+    $status = "";
+        echo "
+                    <div class=\"panel panel-info\">
+                    <div class=\"panel-heading\">Pošiljka na cekanju</div>
+                    <div class=\"panel-body\">
+                        <table class='table'>
+                            <tr><th>Broj porudzbine</th><td>" . $row['broj_posiljke'] . "</td></tr>
+                            <tr><th>Iznos posiljke</th><td>" . $row['ukupan_iznos'] . "</td></tr>
+                            <tr><th>Vreme porucivanja</th><td>" . $row['datum_porudzbine'] . "</td></tr>
+                        </table>
+                        <button class='btn btn-success right spremnaP' data-id='".$row['idporudzbina']."'>Spremna</button>
+
+                    </div>
+                </div>
+                ";
+    }
+    ?>
+
     </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+        <div>
+            <h3>Spremne porudzbine</h3>
+        </div>
+
+        <?php
+        $SQLporudzbine="SELECT * from porudzbina WHERE status=2";
+        $resultPorudzbine=mysqli_query($connection, $SQLporudzbine);
+        while ($row=mysqli_fetch_array($resultPorudzbine,MYSQLI_ASSOC)) {
+            $status = "";
+            echo "
+                    <div class=\"panel panel-success\">
+                    <div class=\"panel-heading\">Spremna porudzbina</div>
+                    <div class=\"panel-body\">
+                        <table class='table'>
+                            <tr><th>Broj porudzbine</th><td>" . $row['broj_posiljke'] . "</td></tr>
+                            <tr><th>Iznos posiljke</th><td>" . $row['ukupan_iznos'] . "</td></tr>
+                            <tr><th>Vreme porucivanja</th><td>" . $row['datum_porudzbine'] . "</td></tr>
+                        </table>
+                    </div>
+                </div>
+                ";
+        }
+        ?>
+
+    </div>
+
+
 </div>
 </body>
 <script>
-    $('.porudzbina_primljena').click(function () {
-        var id=$(this).data('id');
-        $.post('ajax/received-order.php', {
+    $('.spremnaP').click(function () {
+        var id = $(this).data('id')
+        $.post('ajax/spremna.php', {
             'id_porudzbine':id
-        }, function (data) {
+        }, function () {
             location.reload();
-
         })
 
-    })</script>
+    })
+</script>
 </html>

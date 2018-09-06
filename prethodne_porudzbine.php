@@ -83,7 +83,7 @@ $user=mysqli_fetch_array($userResult, MYSQLI_ASSOC);
                         ?>
                     </ul>
                 </li>
-                <li><a href="prethodne_porudzbine.php">Prethodne porudžbine</a></li>
+                <li><a href="user_profile.php">Moj Profil</a></li>
                 <li class="right"><a href="php-assets/logout.php">Odjavi se</a> </li>
 
             </ul>
@@ -130,7 +130,7 @@ $user=mysqli_fetch_array($userResult, MYSQLI_ASSOC);
                             <tr><th>Iznos posiljke</th><td>" . $row['ukupan_iznos'] . "</td></tr>
                             <tr><th>Vreme porucivanja</th><td>" . $row['datum_porudzbine'] . "</td></tr>
                         </table>
-                        <button class='btn btn-danger right' id='ponoviPorudzbinu' data-id='".$row['idporudzbina']."'>Ponovi porudžbinu</button>
+                        <button class='btn btn-danger right ponoviPorudzbinu' data-id='".$row['idporudzbina']."'>Ponovi porudžbinu</button>
                     </div>
                 </div>
                 ";
@@ -142,10 +142,12 @@ $user=mysqli_fetch_array($userResult, MYSQLI_ASSOC);
     </div>
 </div>
 <script>
-    $('#ponoviPorudzbinu').click(function () {
+    $('.ponoviPorudzbinu').click(function () {
+        var id=$(this).data('id');
         $.post('ajax/repeat-order.php', {
-            'id_porudzbine':$(this).data('id')
+            'id_porudzbine':id
         }, function (data) {
+            location.reload();
 
         })
 

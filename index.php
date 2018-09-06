@@ -59,6 +59,7 @@ $categories_result=mysqli_query($connection, $categories_sql);
     <!-- End Facebook Pixel Code -->
 
 
+
 </head>
 <body>
 <nav class="navbar navbar-custom">
@@ -102,6 +103,22 @@ $categories_result=mysqli_query($connection, $categories_sql);
                         x.style.color= "white";
                     }
                 </script>
+                <?php
+                    if (isset($_SESSION['user'])){
+                    ?>
+                <li><a href="user_profile.php.php">Moj Profil</a></li>
+                <li class="right"><a href="php-assets/logout.php">Odjavi se</a> </li>
+                        <?php
+                    }
+                    else {
+                        ?>
+                        <li><a data-toggle="modal" data-target="#checkoutModal"">Prijava</a></li>
+
+
+                    <?php
+                }
+                ?>
+
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -163,7 +180,7 @@ $categories_result=mysqli_query($connection, $categories_sql);
                     <input type="text" class="form-control" id="name" name="name" placeholder="Ime i prezime" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+                    <input type="text" class="form-control" placeholder="Email" required>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Broj mobilnog telefona" required>
@@ -249,6 +266,86 @@ $categories_result=mysqli_query($connection, $categories_sql);
         src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script><!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/salads.js"></script>
+
+
+<div id="checkoutModal" class="modal fade" role="dialog">
+    <div id="login-overlay" class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">Prijava</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="well">
+                            <form id="loginForm" method="POST" action="php-assets/login_check.php">
+                                <div class="form-group">
+                                    <label for="email" class="control-label">E-mail</label>
+                                    <input type="text" class="form-control" id="email" name="email"  required="" title="Please enter your email" placeholder="example@gmail.com">
+                                    <span class="help-block"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="control-label">Lozinka</label>
+                                    <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">
+                                    <span class="help-block"></span>
+                                </div>
+                                <div id="loginErrorMsg" class="alert alert-error hide">Pogrešni login podaci</div>
+
+                                <button type="submit" class="btn btn-success btn-block">Prijavi se</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <p class="lead">Registrij se sada <span class="text-success">BESPLATNO JE</span></p>
+                        <ul class="list-unstyled" style="line-height: 2">
+                            <li><span class="fa fa-check text-success"></span> Pregled svih porudžbina</li>
+                            <li><span class="fa fa-check text-success"></span> Brzo naručivanje</li>
+                            <li><span class="fa fa-check text-success"></span> Omiljene porudžbine</li>
+                        </ul>
+                        <p><a href="register.php" class="btn btn-info btn-block">Registruj se!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="potrvdinalog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Uspešno</h4>
+            </div>
+            <div class="modal-body">
+
+                <h1>Uspešna registracija. Molimo Vas da potvrdite email!</h1>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        if(window.location.hash) {
+            var hash = window.location.hash;
+            console.log(hash); // Show bootstrap modal id in console
+            if ( $( hash ).hasClass('modal') ) {
+                setTimeout(function () {
+                    $(hash).modal('show');
+                }, 1000)
+            }
+        }
+    });
+</script>
 </body>
 </html>

@@ -1,10 +1,6 @@
 <?php
 include('db_config.php');
 session_start();
-if (!isset($_SESSION['cart']))
-{
-    $_SESSION['cart']=array();
-}
 
 if(isset($_SESSION['user'])){
     $user_check = $_SESSION['user'];
@@ -15,6 +11,6 @@ if(isset($_SESSION['user'])){
         header("location:index.php");
     }
 } else {
-    $_SESSION['guest']=session_regenerate_id();
+    header("location:index.php");
 }
 ?>

@@ -250,8 +250,8 @@ $category_name=mysqli_query($connection, "SELECT naziv_kategorije from kategorij
                         <div class="well">
                             <form id="loginForm" method="POST" action="php-assets/login_check.php">
                                 <div class="form-group">
-                                    <label for="username" class="control-label">E-mail</label>
-                                    <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="example@gmail.com">
+                                    <label for="email" class="control-label">E-mail</label>
+                                    <input type="text" class="form-control" id="email" name="email"  required="" title="Please enter your email" placeholder="example@gmail.com">
                                     <span class="help-block"></span>
                                 </div>
                                 <div class="form-group">

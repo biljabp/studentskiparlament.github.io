@@ -18,6 +18,8 @@ $SQL="INSERT INTO kupac ( ime, email, password, ulica_broj, mesto, post_broj,  c
 VALUES ('$name', '$email', '$password', '$address', '$city', '$postal_code', '$code')";
 
 if (mysqli_query($connection, $SQL)) {
+
+    header ('Location: ../index.php#potrvdinalog');
     echo "New record created successfully";
 } else {
     echo "Error: " . $SQL . "<br>" . mysqli_error($connection);
