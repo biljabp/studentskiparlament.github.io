@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22eaad3a-921e-436c-812b-02a0774c386e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ketering.php" beforeDir="false" afterPath="$PROJECT_DIR$/ketering.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kontakt.php" beforeDir="false" afterPath="$PROJECT_DIR$/kontakt.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/o_nama.php" beforeDir="false" afterPath="$PROJECT_DIR$/o_nama.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php-assets/register_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/php-assets/register_check.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php-assets/user_session.php" beforeDir="false" afterPath="$PROJECT_DIR$/php-assets/user_session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php-assets/verify_account.php" beforeDir="false" afterPath="$PROJECT_DIR$/php-assets/verify_account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/porudzbina.php" beforeDir="false" afterPath="$PROJECT_DIR$/porudzbina.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prethodne_porudzbine.php" beforeDir="false" afterPath="$PROJECT_DIR$/prethodne_porudzbine.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salate.php" beforeDir="false" afterPath="$PROJECT_DIR$/salate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/user_profile.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,41 +15,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="3">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="add_product.php" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/add_product.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="585">
-                    <caret line="108" column="67" selection-start-line="108" selection-start-column="67" selection-end-line="108" selection-end-column="67" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="prethodne_porudzbine.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/prethodne_porudzbine.php">
+      <file leaf-file-name="porudzbina.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/porudzbina.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="144" column="8" selection-start-line="144" selection-start-column="8" selection-end-line="144" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="received-order.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ajax/received-order.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+            <state relative-caret-position="169">
+              <caret line="96" column="4" selection-start-line="96" selection-start-column="4" selection-end-line="96" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -152,7 +114,6 @@
         <option value="$PROJECT_DIR$/ajax/repeat-order.php" />
         <option value="$PROJECT_DIR$/php-assets/user_logout.php" />
         <option value="$PROJECT_DIR$/php-assets/user_session.php" />
-        <option value="$PROJECT_DIR$/salate.php" />
         <option value="$PROJECT_DIR$/ketering.php" />
         <option value="$PROJECT_DIR$/kontakt.php" />
         <option value="$PROJECT_DIR$/o_nama.php" />
@@ -160,7 +121,6 @@
         <option value="$PROJECT_DIR$/register.php" />
         <option value="$PROJECT_DIR$/php-assets/profile_session.php" />
         <option value="$PROJECT_DIR$/php-assets/verify_account.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/admin_login .php" />
         <option value="$PROJECT_DIR$/php-assets/admin_session.php" />
         <option value="$PROJECT_DIR$/admin_login.php" />
@@ -170,11 +130,13 @@
         <option value="$PROJECT_DIR$/add_product.php" />
         <option value="$PROJECT_DIR$/php-assets/insert_product.php" />
         <option value="$PROJECT_DIR$/admin_panel.php" />
-        <option value="$PROJECT_DIR$/porudzbina.php" />
         <option value="$PROJECT_DIR$/php-assets/login_check.php" />
         <option value="$PROJECT_DIR$/ajax/received-order.php" />
         <option value="$PROJECT_DIR$/user_profile.php" />
         <option value="$PROJECT_DIR$/prethodne_porudzbine.php" />
+        <option value="$PROJECT_DIR$/salate.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/porudzbina.php" />
       </list>
     </option>
   </component>
@@ -281,12 +243,12 @@
       <workItem from="1527860417630" duration="4089000" />
       <workItem from="1529305821410" duration="4853000" />
       <workItem from="1531095386069" duration="48000" />
-      <workItem from="1535992136294" duration="66780000" />
+      <workItem from="1535992136294" duration="67476000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87094000" />
+    <option name="totallyTimeSpent" value="87790000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -471,16 +433,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/salate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="125" column="64" lean-forward="true" selection-start-line="125" selection-start-column="64" selection-end-line="125" selection-end-column="108" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ketering.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -589,13 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/porudzbina.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ajax/repeat-order.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -610,24 +555,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin_panel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="160" column="26" lean-forward="true" selection-start-line="160" selection-end-line="161" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/received-order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -638,10 +569,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/salate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="253" column="100" selection-start-line="253" selection-start-column="100" selection-end-line="253" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="157" column="9" lean-forward="true" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/received-order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/prethodne_porudzbine.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="144" column="8" selection-start-line="144" selection-start-column="8" selection-end-line="144" selection-end-column="8" />
+        <state relative-caret-position="199">
+          <caret line="143" column="8" lean-forward="true" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/porudzbina.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="96" column="4" selection-start-line="96" selection-start-column="4" selection-end-line="96" selection-end-column="4" />
         </state>
       </provider>
     </entry>

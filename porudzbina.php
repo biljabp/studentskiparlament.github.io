@@ -94,7 +94,7 @@ $categories_result=mysqli_query($connection, $categories_sql);
 
 </nav>
 <div class="container">
-<h1>Uspesno ste se registrovali. Da biste dovrsili vasu porudzbinu, morate da potvrdite jos jednom</h1>
+<h1>Da biste dovrsili vasu porudzbinu, morate da potvrdite jos jednom</h1>
     <?php
 
     $string="(";
@@ -103,7 +103,6 @@ $categories_result=mysqli_query($connection, $categories_sql);
         $string.=$id.', ';
     }
     $string=substr($string, 0, -2).')';
-    echo $string;
     $SQL="SELECT * from proizvod where idproizvod IN $string ";
     $cart_items = mysqli_query($connection,$SQL);
     $counted_arrays=array_count_values($_SESSION['cart']);
